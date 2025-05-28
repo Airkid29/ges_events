@@ -46,6 +46,123 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 include_once 'includes/header.php';
 ?>
 
+<style>
+    body {
+        background: linear-gradient(120deg, #f0f4f8 0%, #e0e7ef 100%);
+        font-family: 'Segoe UI', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+    }
+
+    .page-title {
+        text-align: center;
+        margin-top: 40px;
+        color: #2c3e50;
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+    }
+
+    section.auth-form-section {
+        padding: 0;
+        background: none;
+        border-radius: 0;
+        max-width: none;
+        margin: 0;
+    }
+
+    .auth-form-container {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+        max-width: 400px;
+        margin: 40px auto 0 auto;
+        padding: 32px 28px 24px 28px;
+    }
+
+    .auth-form-container h2 {
+        text-align: center;
+        color: #34495e;
+        margin-bottom: 24px;
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+    .auth-form .form-group {
+        margin-bottom: 18px;
+    }
+
+    .auth-form label {
+        display: block;
+        margin-bottom: 6px;
+        color: #2c3e50;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+
+    .auth-form input[type="email"],
+    .auth-form input[type="password"] {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #d1d5db;
+        border-radius: 6px;
+        font-size: 1rem;
+        background: #f9fafb;
+        transition: border-color 0.2s;
+    }
+
+    .auth-form input:focus {
+        border-color: #4f8cff;
+        outline: none;
+        background: #fff;
+    }
+
+    .btn.btn-submit {
+        width: 100%;
+        padding: 12px 0;
+        background: linear-gradient(90deg,rgb(143, 35, 168) 0%, #1e90ff 100%);
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    .btn.btn-submit:hover {
+        background: linear-gradient(90deg,rgb(10, 35, 79) 0%,rgb(146, 70, 196) 100%);
+    }
+
+    .auth-link {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 0.97rem;
+    }
+
+    .auth-link a {
+        color: #1e90ff;
+        text-decoration: none;
+        transition: text-decoration 0.2s;
+    }
+
+    .auth-link a:hover {
+        text-decoration: underline;
+    }
+
+    .error-message {
+        color: #e74c3c;
+        background: #ffeaea;
+        border: 1px solid #f5c6cb;
+        border-radius: 5px;
+        padding: 10px 14px;
+        margin-bottom: 18px;
+        text-align: center;
+        font-size: 1rem;
+    }
+</style>
 <h1 class="page-title">Connexion</h1>
 
 <section class="auth-form-section">
